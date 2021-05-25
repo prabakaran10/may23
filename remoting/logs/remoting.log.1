@@ -1,0 +1,36 @@
+May 25, 2021 7:22:11 AM hudson.remoting.jnlp.Main createEngine
+INFO: Setting up agent: slave
+May 25, 2021 7:22:11 AM hudson.remoting.jnlp.Main$CuiListener <init>
+INFO: Jenkins agent is running in headless mode.
+May 25, 2021 7:22:11 AM hudson.remoting.Engine startEngine
+INFO: Using Remoting version: 4.6
+May 25, 2021 7:22:11 AM org.jenkinsci.remoting.engine.WorkDirManager initializeWorkDir
+INFO: Using /home/ubuntu/remoting as a remoting work directory
+May 25, 2021 7:22:11 AM hudson.remoting.jnlp.Main$CuiListener status
+INFO: Locating server among [http://52.91.16.21:8080/]
+May 25, 2021 7:22:41 AM hudson.remoting.jnlp.Main$CuiListener error
+SEVERE: Failed to connect to http://52.91.16.21:8080/tcpSlaveAgentListener/: connect timed out
+java.io.IOException: Failed to connect to http://52.91.16.21:8080/tcpSlaveAgentListener/: connect timed out
+	at org.jenkinsci.remoting.engine.JnlpAgentEndpointResolver.resolve(JnlpAgentEndpointResolver.java:214)
+	at hudson.remoting.Engine.innerRun(Engine.java:689)
+	at hudson.remoting.Engine.run(Engine.java:514)
+Caused by: java.net.SocketTimeoutException: connect timed out
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:607)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:242)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:339)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:357)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1226)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1162)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1056)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:990)
+	at org.jenkinsci.remoting.engine.JnlpAgentEndpointResolver.resolve(JnlpAgentEndpointResolver.java:211)
+	... 2 more
+
